@@ -1,0 +1,26 @@
+1-Compile all the 4 classes using the command
+javac ClassName.java
+
+2-Run the server class RMIServer.java, pass a portnumber available on your local machine to run the server on.
+java RMIServer.java start <portnumber>
+
+3-To upload a file
+java RMIClient.java upload <path_on_client> <C:/ServerStorage/filename>
+
+4-To download a file (FileNotFoundException thrown if file doesnot exist).
+java RMIClient.java download <C:/ServerStorage/existing_filename_on_server> <path_on_client/newfilename>
+
+5-To list the directories and file present on the server.
+java RMIClient.java dir <C:/ServerStorage/path_existing_directory_on_server>
+
+6-To create a new directory.
+java RMIClient.java mkdir <C:/ServerStorage/new_directory_name>
+
+7-To delete an existing directory.
+java RMIClient.java rmdir <C:/ServerStorage/existing_directory_name>
+
+8-To delete a file.
+java RMIClient.java rm <C:/ServerStorage/existing_file_name>
+
+9-To shutdown the client.
+java RMIClient.java shutdown
